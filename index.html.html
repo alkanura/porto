@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portofolio – Alka Nur Ardyanto | Staff HR BNSP</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy: #0f1f3d;
+  --navy2: #162849;
+  --gold: #c9933a;
+  --gold2: #e8b86d;
+  --cream: #faf7f2;
+  --white: #ffffff;
+  --gray: #6b7280;
+  --light: #f0ece4;
+  --accent: #1a3a6b;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,147,58,.18) 0%, transparent 70%);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: 30%;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,58,107,.5) 0%, transparent 70%);
+}
+
+.hero-left {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 2px;
+  margin-bottom: 28px;
+  width: fit-content;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.hero-name span { color: var(--gold2); }
+
+.hero-title {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255,255,255,.65);
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+}
+
+.hero-divider {
+  width: 60px; height: 3px;
+  background: var(--gold);
+  margin-bottom: 28px;
+}
+
+.hero-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,.75);
+  max-width: 460px;
+  margin-bottom: 40px;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 44px;
+}
+
+.hero-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,.7);
+  font-size: 14px;
+}
+
+.hero-info-item .icon {
+  width: 32px; height: 32px;
+  background: rgba(201,147,58,.2);
+  border: 1px solid rgba(201,147,58,.3);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  border: 1px solid rgba(201,147,58,.4);
+  color: var(--gold2);
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: .5px;
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.avatar-wrap {
+  position: relative;
+}
+
+.avatar-ring {
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  border: 2px solid rgba(201,147,58,.3);
+  display: flex; align-items: center; justify-content: center;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.avatar-ring::before {
+  content: '';
+  position: absolute;
+  top: -4px; left: 50%;
+  width: 10px; height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.avatar-inner {
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy2), var(--accent));
+  border: 3px solid rgba(201,147,58,.25);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--gold2);
+  animation: spin 20s linear infinite reverse;
+  position: relative;
+}
+
+.bnsp-badge {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  background: var(--gold);
+  color: var(--white);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(0,0,0,.3);
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,.06);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 4px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  padding: 18px 16px;
+  border-bottom: 2px solid transparent;
+  transition: all .2s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--navy);
+  border-bottom-color: var(--gold);
+}
+
+/* ── SECTIONS ── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-sub {
+  font-size: 15px;
+  color: var(--gray);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+}
+
+/* ── STATS ── */
+.stats-bg {
+  background: var(--navy);
+  padding: 60px 0;
+}
+
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 40px 20px;
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+.stat-card:last-child { border-right: none; }
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--gold2);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+
+/* ── KOMPETENSI ── */
+.kompetensi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.komp-card {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: transform .25s, box-shadow .25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.komp-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s;
+}
+
+.komp-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
+.komp-card:hover::before { transform: scaleX(1); }
+
+.komp-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, rgba(201,147,58,.12), rgba(201,147,58,.06));
+  border: 1px solid rgba(201,147,58,.2);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.komp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.komp-desc {
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.skill-bar-wrap { margin-bottom: 10px; }
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: var(--navy);
+  font-weight: 500;
+}
+.skill-bar {
+  height: 5px;
+  background: rgba(0,0,0,.07);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold2));
+  border-radius: 10px;
+  transition: width 1.2s ease;
+}
+
+/* ── BUKTI KERJA ── */
+.bukti-bg { background: var(--light); }
+
+.bukti-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.bukti-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+  transition: transform .25s, box-shadow .25s;
+  display: flex;
+  flex-direction: column;
+}
+.bukti-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.12); }
+
+.bukti-header {
+  background: linear-gradient(135deg, var(--navy), var(--accent));
+  padding: 28px 28px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.bukti-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: rgba(201,147,58,.3);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.bukti-header-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.bukti-header-text p {
+  font-size: 12px;
+  color: rgba(255,255,255,.55);
+  letter-spacing: .5px;
+}
+
+.bukti-body {
+  padding: 24px 28px;
+  flex: 1;
+}
+
+.bukti-body p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.bukti-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bukti-tag {
+  background: rgba(201,147,58,.1);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.bukti-footer {
+  padding: 16px 28px;
+  border-top: 1px solid rgba(0,0,0,.06);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doc-type {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--gray);
+  background: rgba(0,0,0,.04);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* ── POSTER SECTION ── */
+.poster-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.poster-wrap {
+  position: relative;
+}
+
+.poster-wrap::before {
+  content: '';
+  position: absolute;
+  top: 20px; left: 20px;
+  right: -20px; bottom: -20px;
+  background: linear-gradient(135deg, var(--gold), rgba(201,147,58,.3));
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.poster-wrap img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+
+.poster-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--navy);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.poster-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.poster-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.poster-list li::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 10px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ── TUGAS ── */
+.tugas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tugas-card {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+}
+
+.tugas-type {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201,147,58,.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.tugas-list {
+  list-style: none;
+}
+
+.tugas-list li {
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.6;
+  padding: 7px 0;
+  border-bottom: 1px dashed rgba(0,0,0,.08);
+  padding-left: 16px;
+  position: relative;
+}
+
+.tugas-list li:last-child { border-bottom: none; }
+
+.tugas-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16px;
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ── INDIKATOR ── */
+.indikator-bg { background: var(--navy); }
+
+.indikator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.ind-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: background .25s, transform .25s;
+}
+.ind-card:hover { background: rgba(201,147,58,.1); transform: translateY(-3px); }
+
+.ind-icon { font-size: 36px; margin-bottom: 16px; }
+
+.ind-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.ind-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+  line-height: 1.6;
+}
+
+/* ── TOOLS ── */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.tool-item {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+.tool-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+
+.tool-icon { font-size: 28px; margin-bottom: 10px; }
+.tool-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.tool-cat {
+  font-size: 11px;
+  color: var(--gray);
+  letter-spacing: .5px;
+}
+
+/* ── SOP ── */
+.sop-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.sop-card {
+  background: linear-gradient(135deg, var(--navy), var(--accent));
+  border-radius: 20px;
+  padding: 40px;
+  color: var(--white);
+}
+
+.sop-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.sop-card p {
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 28px;
+}
+
+.sop-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.sop-step:last-child { border-bottom: none; }
+
+.sop-num {
+  width: 32px; height: 32px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+  color: var(--white);
+}
+
+.sop-text {
+  font-size: 14px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.5;
+}
+.sop-text strong { color: var(--gold2); }
+
+.form-info {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 20px;
+  padding: 36px;
+}
+
+.form-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.form-info p {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(0,0,0,.08);
+  font-size: 13.5px;
+}
+.form-row:last-child { border-bottom: none; }
+
+.form-row .dot {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.form-row span { color: var(--gray); }
+.form-row strong { color: var(--navy); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.footer-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.footer-name span { color: var(--gold2); }
+
+.footer-role {
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.footer-divider {
+  width: 60px; height: 2px;
+  background: var(--gold);
+  margin: 0 auto 28px;
+}
+
+.footer-note {
+  font-size: 13px;
+  color: rgba(255,255,255,.35);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── FADE-IN ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .kompetensi-grid, .tugas-grid, .tools-grid { grid-template-columns: repeat(2,1fr); }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .indikator-grid { grid-template-columns: repeat(2,1fr); }
+  .bukti-grid, .poster-section, .sop-section { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 60px 20px; }
+  .kompetensi-grid, .tugas-grid, .tools-grid, .stats-grid, .indikator-grid { grid-template-columns: 1fr; }
+  .hero-left { padding: 60px 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-tag">Portofolio . Staff Human Resource</span>
+    <h1 class="hero-name">Alka Nur<br/><span>Ardyanto</span></h1>
+    <p class="hero-title">Staff Human Resource · Administrasi SDM</p>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      Alka Nur Ardyanto merupakan lulusan Hukum Pidana Islam dari Universitas Islam Negeri Raden Mas Said dengan minat di bidang legal dan human resource.<strong style="color:var(--gold2)"> </strong> 
+      Portofolio ini berisi pengalaman, proyek, dan pengembangan kompetensi saya dalam pengelolaan administrasi kepegawaian, rekrutmen, payroll, BPJS, 
+      dan Pemahanan Tentang sistem HRIS.
+    </p>
+    <div class="hero-info">
+      <div class="hero-info-item"><span class="icon">ℹ️</span>Alka Nur</div>
+      <div class="hero-info-item"><span class="icon">🏢</span>+62 895404438735</div>
+      <div class="hero-info-item"><span class="icon">✉️</span>alkanura@gmail.com</div>
+      <div class="hero-info-item"><span class="icon">🎓</span> Hukum Pidana Islam, Universitas Islam Negeri Raden Mas Said Surakarta</div>
+      
+    </div>
+    <div class="hero-badges">
+      <span class="badge">Administrasi Kepegawaian</span>
+      <span class="badge">Rekrutmen & Seleksi</span>
+      <span class="badge">Payroll & BPJS</span>
+      <span class="badge">HRIS</span>
+      <span class="badge">Analisis Jabatan</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="avatar-wrap">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          A
+          <div class="bnsp-badge">BNSP · HR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#kompetensi">Kompetensi</a>
+    <a class="nav-link" href="#bukti">Bukti Kerja</a>
+    <a class="nav-link" href="#tugas">Uraian Tugas</a>
+    <a class="nav-link" href="#indikator">Indikator</a>
+    <a class="nav-link" href="#tools">Tools</a>
+    <a class="nav-link" href="#sop">SOP & Form</a>
+    <a class="nav-link" href="#rekrutmen">Rekrutmen</a>
+  </div>
+</nav>
+
+<!-- STATS -->
+<div class="stats-bg">
+  <div class="stats-grid">
+    <div class="stat-card fade-in">
+      <div class="stat-number">6</div>
+      <div class="stat-label">Dokumen Portofolio</div>
+    </div>
+    <div class="stat-card fade-in" style="transition-delay:.1s">
+      <div class="stat-number">11</div>
+      <div class="stat-label">Tanggung Jawab Utama</div>
+    </div>
+    <div class="stat-card fade-in" style="transition-delay:.2s">
+      <div class="stat-number">6</div>
+      <div class="stat-label">Indikator Keberhasilan</div>
+    </div>
+    <div class="stat-card fade-in" style="transition-delay:.3s">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Target Akurasi Data</div>
+    </div>
+  </div>
+</div>
+
+<!-- KOMPETENSI -->
+<section class="section" id="kompetensi">
+  <p class="section-label">Unit Kompetensi</p>
+  <h2 class="section-title">Area Kompetensi Utama</h2>
+  <p class="section-sub">Kompetensi yang dikuasai sesuai skema BNSP Staf Administrasi SDM, dibuktikan melalui dokumen portofolio dan praktik kerja nyata.</p>
+  
+  <div class="kompetensi-grid">
+    <div class="komp-card fade-in">
+      <div class="komp-icon">👥</div>
+      <div class="komp-title">Rekrutmen & Seleksi</div>
+      <div class="komp-desc">Mengelola proses rekrutmen end-to-end: analisis kebutuhan, posting lowongan, screening CV, wawancara, hingga onboarding karyawan baru.</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Talent Sourcing</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Administrasi Rekrutmen</span><span>92%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+      </div>
+    </div>
+
+    <div class="komp-card fade-in" style="transition-delay:.1s">
+      <div class="komp-icon">📋</div>
+      <div class="komp-title">Administrasi Kepegawaian</div>
+      <div class="komp-desc">Pengelolaan data karyawan di HRIS, pemrosesan kontrak kerja, surat menyurat, absensi, cuti, dan dokumen PHK/pensiun.</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Manajemen Dokumen</span><span>95%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Input & Akurasi Data</span><span>97%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:97%"></div></div>
+      </div>
+    </div>
+
+    <div class="komp-card fade-in" style="transition-delay:.2s">
+      <div class="komp-icon">💰</div>
+      <div class="komp-title">Payroll & Kompensasi</div>
+      <div class="komp-desc">Membantu pemrosesan penggajian bulanan, verifikasi lembur, tunjangan, potongan, dan administrasi BPJS Ketenagakerjaan & Kesehatan.</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Proses Payroll</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Administrasi BPJS</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+    </div>
+
+    <div class="komp-card fade-in" style="transition-delay:.15s">
+      <div class="komp-icon">🔍</div>
+      <div class="komp-title">Analisis Jabatan</div>
+      <div class="komp-desc">Menyusun analisis jabatan melalui wawancara mendalam, mengidentifikasi tugas, kompetensi, kewenangan, dan risiko posisi.</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Analisis & Dokumentasi</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+    </div>
+
+    <div class="komp-card fade-in" style="transition-delay:.25s">
+      <div class="komp-icon">📊</div>
+      <div class="komp-title">Pelaporan SDM</div>
+      <div class="komp-desc">Menyusun laporan statistik SDM (headcount, turnover, absensi) bulanan dan triwulanan sebagai bahan evaluasi manajemen.</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Data Analytics (Excel)</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+    </div>
+
+    <div class="komp-card fade-in" style="transition-delay:.3s">
+      <div class="komp-icon">⚖️</div>
+      <div class="komp-title">Kepatuhan Ketenagakerjaan</div>
+      <div class="komp-desc">Memastikan kepatuhan perusahaan terhadap UU Cipta Kerja, PP terkait, dan regulasi Disnaker, serta mendukung audit ketenagakerjaan.</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-label"><span>Regulasi Ketenagakerjaan</span><span>82%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUKTI KERJA -->
+<div class="bukti-bg">
+<section class="section" id="bukti">
+  <p class="section-label">Bukti Portofolio</p>
+  <h2 class="section-title">Dokumen Kerja yang Dihasilkan</h2>
+  <p class="section-sub">Seluruh dokumen berikut disusun secara mandiri sebagai bukti nyata kompetensi dalam peran Staf HR di PT Sinergi Insan Andalan (Eduwork).</p>
+
+  <div class="bukti-grid">
+
+    <div class="bukti-card fade-in">
+      <div class="bukti-header">
+        <div class="bukti-num">01</div>
+        <div class="bukti-header-text">
+          <h3>Analisis Jabatan Staf HR</h3>
+          <p>Wawancara · 20 Maret 2025</p>
+        </div>
+      </div>
+      <div class="bukti-body">
+        <p>Dokumen hasil wawancara analisis jabatan dengan narasumber Staf HR (Budi Santoso) yang dipimpin oleh HC Manager (Dhani Perwira), mencakup tugas harian, periodik, insidental, indikator keberhasilan, kompetensi, kewenangan, dan risiko jabatan.</p>
+        <div class="bukti-tags">
+          <span class="bukti-tag">Analisis Jabatan</span>
+          <span class="bukti-tag">Wawancara</span>
+          <span class="bukti-tag">HC & Legal</span>
+        </div>
+      </div>
+      <div class="bukti-footer">
+        <span class="doc-type">DOCX</span>
+        <span class="doc-type">001/ANJAB/HR/2025</span>
+      </div>
+    </div>
+
+    <div class="bukti-card fade-in" style="transition-delay:.1s">
+      <div class="bukti-header">
+        <div class="bukti-num">02</div>
+        <div class="bukti-header-text">
+          <h3>Job Description Staff HR</h3>
+          <p>HR-001 · Human Capital Dept</p>
+        </div>
+      </div>
+      <div class="bukti-body">
+        <p>Deskripsi pekerjaan resmi posisi Human Resource Staff (HR-001) meliputi identifikasi jabatan, tujuan posisi, 11 tanggung jawab utama, kewenangan finansial & non-finansial, persyaratan kompetensi, serta KPI jabatan.</p>
+        <div class="bukti-tags">
+          <span class="bukti-tag">Job Description</span>
+          <span class="bukti-tag">KPI</span>
+          <span class="bukti-tag">11 Tanggung Jawab</span>
+        </div>
+      </div>
+      <div class="bukti-footer">
+        <span class="doc-type">DOCX</span>
+        <span class="doc-type">HR-001</span>
+      </div>
+    </div>
+
+    <div class="bukti-card fade-in" style="transition-delay:.15s">
+      <div class="bukti-header">
+        <div class="bukti-num">03</div>
+        <div class="bukti-header-text">
+          <h3>Struktur Organisasi Perusahaan</h3>
+          <p>No. 001/SO/HRD/EDWK/I/2026</p>
+        </div>
+      </div>
+      <div class="bukti-body">
+        <p>Dokumen resmi struktur organisasi PT Sinergi Insan Andalan (Eduwork) berlaku 25 Februari 2026, disusun oleh Staf HR dan disetujui oleh Direktur Utama, memuat bagan hierarki jabatan seluruh perusahaan.</p>
+        <div class="bukti-tags">
+          <span class="bukti-tag">Struktur Org</span>
+          <span class="bukti-tag">Resmi Perusahaan</span>
+          <span class="bukti-tag">Feb 2026</span>
+        </div>
+      </div>
+      <div class="bukti-footer">
+        <span class="doc-type">DOCX</span>
+        <span class="doc-type">001/SO/HRD/EDWK/I/2026</span>
+      </div>
+    </div>
+
+    <div class="bukti-card fade-in" style="transition-delay:.2s">
+      <div class="bukti-header">
+        <div class="bukti-num">04</div>
+        <div class="bukti-header-text">
+          <h3>SOP Penyusunan Uraian Jabatan</h3>
+          <p>No. 001/SOP/HR/EDWK/I/2026</p>
+        </div>
+      </div>
+      <div class="bukti-body">
+        <p>Standard Operating Procedure resmi penyusunan uraian jabatan di Eduwork, memuat latar belakang, tujuan, urutan kerja (flowchart 4 tahap), daftar dokumen pendukung, dan lembar pengesahan.</p>
+        <div class="bukti-tags">
+          <span class="bukti-tag">SOP</span>
+          <span class="bukti-tag">Standar Operasional</span>
+          <span class="bukti-tag">All Division</span>
+        </div>
+      </div>
+      <div class="bukti-footer">
+        <span class="doc-type">DOCX</span>
+        <span class="doc-type">001/SOP/HR/EDWK/I/2026</span>
+      </div>
+    </div>
+
+    <div class="bukti-card fade-in" style="transition-delay:.25s">
+      <div class="bukti-header">
+        <div class="bukti-num">05</div>
+        <div class="bukti-header-text">
+          <h3>Form Hiring Request (Penambahan Karyawan)</h3>
+          <p>Formulir Resmi Rekrutmen</p>
+        </div>
+      </div>
+      <div class="bukti-body">
+        <p>Formulir permintaan karyawan baru (Hiring Request) berisi informasi posisi, departemen, jenis penugasan, deskripsi tugas, paket kompensasi (gaji, tunjangan, BPJS), kualifikasi pendidikan, dan profil kompetensi yang dibutuhkan.</p>
+        <div class="bukti-tags">
+          <span class="bukti-tag">Hiring Request</span>
+          <span class="bukti-tag">Rekrutmen</span>
+          <span class="bukti-tag">Kompensasi</span>
+        </div>
+      </div>
+      <div class="bukti-footer">
+        <span class="doc-type">XLSX</span>
+        <span class="doc-type">Form HR-002</span>
+      </div>
+    </div>
+
+    <div class="bukti-card fade-in" style="transition-delay:.3s">
+      <div class="bukti-header">
+        <div class="bukti-num">06</div>
+        <div class="bukti-header-text">
+          <h3>Poster Lowongan Staff HR</h3>
+          <p>Media Rekrutmen · Eduwork</p>
+        </div>
+      </div>
+      <div class="bukti-body">
+        <p>Materi visual rekrutmen Staff Human Resource yang memuat kualifikasi, deskripsi pekerjaan, dan informasi pengiriman lamaran. Dibuat untuk kebutuhan talent sourcing di PT Sinergi Insan Andalan (Eduwork).</p>
+        <div class="bukti-tags">
+          <span class="bukti-tag">Poster Rekrutmen</span>
+          <span class="bukti-tag">Talent Sourcing</span>
+          <span class="bukti-tag">Visual</span>
+        </div>
+      </div>
+      <div class="bukti-footer">
+        <span class="doc-type">PNG</span>
+        <span class="doc-type">admin@eduwork.id</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- TUGAS -->
+<section class="section" id="tugas">
+  <p class="section-label">Uraian Pekerjaan</p>
+  <h2 class="section-title">Rincian Tugas & Tanggung Jawab</h2>
+  <p class="section-sub">Berdasarkan dokumen Analisis Jabatan dan Job Description, berikut pembagian tugas berdasarkan frekuensi pelaksanaan.</p>
+
+  <div class="tugas-grid">
+    <div class="tugas-card fade-in">
+      <span class="tugas-type">Tugas Harian</span>
+      <ul class="tugas-list">
+        <li>Input & pembaruan data karyawan di HRIS</li>
+        <li>Proses absensi dan kehadiran karyawan</li>
+        <li>Respons pertanyaan administrasi kepegawaian (maks. 1×24 jam)</li>
+        <li>Pengarsipan dokumen kepersonaliaan</li>
+        <li>Koordinasi HR harian dengan atasan</li>
+      </ul>
+    </div>
+
+    <div class="tugas-card fade-in" style="transition-delay:.1s">
+      <span class="tugas-type">Tugas Periodik</span>
+      <ul class="tugas-list">
+        <li>Rekapitulasi absensi bulanan untuk payroll</li>
+        <li>Bantu proses penggajian (payroll) tiap bulan</li>
+        <li>Proses kontrak & perpanjangan kontrak karyawan</li>
+        <li>Laporan statistik SDM (turnover, headcount) triwulanan</li>
+        <li>Dukung evaluasi kinerja karyawan semesteran</li>
+        <li>Administrasi BPJS Ketenagakerjaan & Kesehatan</li>
+      </ul>
+    </div>
+
+    <div class="tugas-card fade-in" style="transition-delay:.2s">
+      <span class="tugas-type">Tugas Insidental</span>
+      <ul class="tugas-list">
+        <li>Bantu rekrutmen & seleksi karyawan baru</li>
+        <li>Siapkan dokumen PHK atau pensiun karyawan</li>
+        <li>Koordinasi kegiatan training & pengembangan</li>
+        <li>Dukung audit ketenagakerjaan / instansi eksternal</li>
+        <li>Koordinasi dengan vendor lembaga sertifikasi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- INDIKATOR -->
+<div class="indikator-bg">
+<section class="section" id="indikator">
+  <p class="section-label" style="color:var(--gold2)">KPI & Keberhasilan</p>
+  <h2 class="section-title" style="color:var(--white)">Indikator Keberhasilan Kerja</h2>
+  <p class="section-sub" style="color:rgba(255,255,255,.55)">Standar kinerja yang digunakan sebagai tolok ukur keberhasilan Staf HR di PT Sinergi Insan Andalan (Eduwork).</p>
+
+  <div class="indikator-grid">
+    <div class="ind-card fade-in">
+      <div class="ind-icon">🎯</div>
+      <div class="ind-title">Akurasi Data 100%</div>
+      <div class="ind-desc">Input data karyawan akurat dan tepat waktu tanpa kesalahan dalam sistem HRIS</div>
+    </div>
+    <div class="ind-card fade-in" style="transition-delay:.1s">
+      <div class="ind-icon">😊</div>
+      <div class="ind-title">Kepuasan Karyawan ≥85%</div>
+      <div class="ind-desc">Tingkat kepuasan karyawan terhadap layanan administrasi HR minimal 85%</div>
+    </div>
+    <div class="ind-card fade-in" style="transition-delay:.2s">
+      <div class="ind-icon">💳</div>
+      <div class="ind-title">Payroll Tepat Waktu</div>
+      <div class="ind-desc">Proses penggajian selesai setiap bulan tanpa komplain signifikan dari karyawan</div>
+    </div>
+    <div class="ind-card fade-in" style="transition-delay:.15s">
+      <div class="ind-icon">📁</div>
+      <div class="ind-title">Arsip Rapi & Telusur</div>
+      <div class="ind-desc">Dokumen kepegawaian tersimpan rapi dan mudah ditelusuri sesuai standar DMS</div>
+    </div>
+    <div class="ind-card fade-in" style="transition-delay:.25s">
+      <div class="ind-icon">⚖️</div>
+      <div class="ind-title">Kepatuhan Regulasi</div>
+      <div class="ind-desc">Tingkat kepatuhan terhadap regulasi ketenagakerjaan UU Cipta Kerja dan PP terkait</div>
+    </div>
+    <div class="ind-card fade-in" style="transition-delay:.3s">
+      <div class="ind-icon">⏱️</div>
+      <div class="ind-title">Respons Maks 1×24 Jam</div>
+      <div class="ind-desc">Waktu respons terhadap permintaan administrasi karyawan maksimal 1×24 jam kerja</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- TOOLS -->
+<section class="section" id="tools">
+  <p class="section-label">Teknologi & Alat Kerja</p>
+  <h2 class="section-title">Tools yang Dikuasai</h2>
+  <p class="section-sub">Alat dan aplikasi yang digunakan sehari-hari dalam pekerjaan sebagai Staf HR di Eduwork.</p>
+
+  <div class="tools-grid">
+    <div class="tool-item fade-in">
+      <div class="tool-icon">💻</div>
+      <div class="tool-name">Microsoft Excel</div>
+      <div class="tool-cat">Payroll & Laporan</div>
+    </div>
+    <div class="tool-item fade-in" style="transition-delay:.05s">
+      <div class="tool-icon">📝</div>
+      <div class="tool-name">Microsoft Word</div>
+      <div class="tool-cat">Administrasi & Kontrak</div>
+    </div>
+    <div class="tool-item fade-in" style="transition-delay:.1s">
+      <div class="tool-icon">📊</div>
+      <div class="tool-name">Microsoft PowerPoint</div>
+      <div class="tool-cat">Presentasi HR</div>
+    </div>
+    <div class="tool-item fade-in" style="transition-delay:.15s">
+      <div class="tool-icon">🗂️</div>
+      <div class="tool-name">HRIS System</div>
+      <div class="tool-cat">Database Karyawan</div>
+    </div>
+    <div class="tool-item fade-in" style="transition-delay:.2s">
+      <div class="tool-icon">📧</div>
+      <div class="tool-name">Microsoft Outlook</div>
+      <div class="tool-cat">Komunikasi Resmi</div>
+    </div>
+    <div class="tool-item fade-in" style="transition-delay:.25s">
+      <div class="tool-icon">💬</div>
+      <div class="tool-name">Teams / Slack</div>
+      <div class="tool-cat">Kolaborasi Tim</div>
+    </div>
+    <div class="tool-item fade-in" style="transition-delay:.3s">
+      <div class="tool-icon">🏥</div>
+      <div class="tool-name">Portal BPJS Online</div>
+      <div class="tool-cat">BPJS TK & Kesehatan</div>
+    </div>
+    <div class="tool-item fade-in" style="transition-delay:.35s">
+      <div class="tool-icon">🖨️</div>
+      <div class="tool-name">DMS & Scanner</div>
+      <div class="tool-cat">Manajemen Dokumen</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOP & FORM -->
+<div class="bukti-bg">
+<section class="section" id="sop">
+  <p class="section-label">Prosedur & Formulir</p>
+  <h2 class="section-title">SOP & Form Rekrutmen</h2>
+  <p class="section-sub">Prosedur operasional dan formulir standar yang disusun dan digunakan dalam proses kerja HR di Eduwork.</p>
+
+  <div class="sop-section">
+    <div class="sop-card fade-in">
+      <h3>SOP Penyusunan Uraian Jabatan</h3>
+      <p>No. 001/SOP/HR/EDWK/I/2026 · Berlaku untuk Semua Divisi</p>
+      <div class="sop-step">
+        <div class="sop-num">1</div>
+        <div class="sop-text"><strong>SPV Departemen</strong> membuat draft template uraian jabatan sesuai kebutuhan unit</div>
+      </div>
+      <div class="sop-step">
+        <div class="sop-num">2</div>
+        <div class="sop-text"><strong>Staf HR</strong> menerima dokumen draft dan melakukan verifikasi kelengkapan data</div>
+      </div>
+      <div class="sop-step">
+        <div class="sop-num">3</div>
+        <div class="sop-text"><strong>Manager HR</strong> memeriksa dan menganalisa isi uraian jabatan secara menyeluruh</div>
+      </div>
+      <div class="sop-step">
+        <div class="sop-num">4</div>
+        <div class="sop-text"><strong>Manager HR menyetujui</strong> dokumen — jika tidak disetujui dikembalikan untuk revisi</div>
+      </div>
+    </div>
+
+    <div class="form-info fade-in" style="transition-delay:.15s">
+      <h3>Form Hiring Request</h3>
+      <p>Formulir standar permintaan penambahan karyawan baru</p>
+      <div class="form-row"><span class="dot"></span><strong>Section 1:</strong><span>Hiring Request Information (User, Position, Dept, PIC)</span></div>
+      <div class="form-row"><span class="dot"></span><strong>Section 2:</strong><span>Job Request Information (Judul, Jumlah, Start Date, Lokasi)</span></div>
+      <div class="form-row"><span class="dot"></span><strong>Section 3:</strong><span>Assignment Type (Full Time / Part Time / Temporary / Temp-to-Hire)</span></div>
+      <div class="form-row"><span class="dot"></span><strong>Section 4:</strong><span>Deskripsi Tugas & Tanggung Jawab (10 poin)</span></div>
+      <div class="form-row"><span class="dot"></span><strong>Section 5:</strong><span>Pay Rate & Benefit (Gaji, Tunjangan, BPJS Kes, BPJS TK, Asuransi)</span></div>
+      <div class="form-row"><span class="dot"></span><strong>Section 6:</strong><span>Education & Certification Requirements</span></div>
+      <div class="form-row"><span class="dot"></span><strong>Section 7:</strong><span>Skills & Traits Description dengan Skor</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- POSTER REKRUTMEN -->
+<section class="section" id="rekrutmen">
+  <p class="section-label">Media Rekrutmen</p>
+  <h2 class="section-title">Poster Lowongan Staff HR</h2>
+  <p class="section-sub">Materi visual rekrutmen yang dibuat untuk keperluan talent sourcing Staff Human Resource di PT Sinergi Insan Andalan (Eduwork).</p>
+
+  <div class="poster-section">
+    <div class="poster-wrap fade-in">
+      <img src="Poster Hr.svg" alt="Poster Lowongan Staff HR">
+    </div>
+    <div class="poster-content fade-in" style="transition-delay:.15s">
+      <h2>Deskripsi & Kualifikasi Posisi Staff HR</h2>
+      <p style="font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:20px">Poster rekrutmen ini dibuat sebagai bagian dari proses talent sourcing Staff HR di Eduwork, memuat informasi lengkap tentang tanggung jawab dan kualifikasi posisi.</p>
+      <ul class="poster-list">
+        <li>Mengelola administrasi karyawan (data, kontrak, surat menyurat)</li>
+        <li>Menginput dan memperbarui database karyawan</li>
+        <li>Membantu proses rekrutmen (posting lowongan, screening, interview)</li>
+        <li>Mengelola absensi, cuti, dan lembur karyawan</li>
+        <li>Mendukung proses payroll dan administrasi BPJS</li>
+        <li>Menyusun laporan HR secara berkala</li>
+      </ul>
+      <div style="background:rgba(201,147,58,.08);border:1px solid rgba(201,147,58,.2);border-radius:12px;padding:20px;">
+        <p style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;">Kirim Lamaran</p>
+        <p style="font-size:14px;font-weight:600;color:var(--navy);">✉ admin@eduwork.id</p>
+        <p style="font-size:13px;color:var(--gray);margin-top:4px;">Atau isi formulir online yang tersedia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Alka Nur <span>Ardyanto</span></div>
+  <div class="footer-role">Portofolio · Staf Administrasi SDM</div>
+  <div class="footer-divider"></div>
+  <p class="footer-note">Alka Nura · Sukoharjo, Jawa Tengah · alkanura046@gmail.com</p>
+  <p style="margin-top:12px;font-size:11px;color:rgba(255,255,255,.2);font-family:'DM Mono',monospace;">Portofolio — Dokumen ini disusun Kebutuhan Portofolio</p>
+</footer>
+
+<script>
+// Fade-in on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Nav active highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 120) current = s.id; });
+  navLinks.forEach(l => {
+    l.classList.remove('active');
+    if(l.getAttribute('href') === '#' + current) l.classList.add('active');
+  });
+});
+
+// Animate skill bars when visible
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.querySelectorAll('.skill-fill').forEach(bar => {
+        const w = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => { bar.style.width = w; }, 200);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.komp-card').forEach(c => skillObserver.observe(c));
+</script>
+</body>
+</html>
